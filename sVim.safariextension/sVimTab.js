@@ -207,19 +207,19 @@ sVimTab.commands = {
     safari.self.tab.dispatchMessage("newTabBackground", url);
   },
 
+  openUrl: function(url) {
+    safari.self.tab.dispatchMessage("openUrl", url);
+  },
+
   // Search in new tab
   searchInNewTab: function() {
     // Function name is used to display info
-    sVimHelper.search(function newTab(url){
-      safari.self.tab.dispatchMessage("newTab", url);
-    });
+    sVimHelper.openCommandBar("searchInNewTab");
   },
 
   // Search in current tab
   searchInTab: function() {
-    sVimHelper.search(function open(url){
-      safari.self.tab.dispatchMessage("openUrl", url);
-    });
+    sVimHelper.openCommandBar("searchInTab");
   },
 
   // Go back in history

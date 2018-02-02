@@ -127,13 +127,39 @@ sVimHelper.matchLocation = function(location, pattern) {
   return true;
 };
 
-// Take user's input, then google it
-sVimHelper.search = function(urlOpener) {
+// Take user's input, produce search query
+sVimHelper.search = function(s) {
+  // Evaluate user command
+  var searchEngine = {
+    "google": "https://www.google.com/search?q=",
+    "duckduckgo": "https://duckduckgo.com/?q=",
+    "baidu": "http://www.baidu.com/s?wd=",
+    "bing": "https://www.bing.com/search?q=",
+    "yahoo": "https://search.yahoo.com/search?p=",
+    "sogou": "https://www.sogou.com/web?query="
+  };
+  var searchQuery = searchEngine[sVimTab.settings.searchengine] || searchEngine["google"];
+  var url = searchQuery + encodeURI(s)
+  return url;
+};
+
+// Used by sVimHelper.openCommandBar.
+sVimHelper.argumentProcessors = {
+  "searchInTab": sVimHelper.search,
+  "searchInNewTab": sVimHelper.search
+};
+
+sVimHelper.commandMap = {
+  "searchInTab": "openUrl",
+  "searchInNewTab": "newTab"
+};
+
+sVimHelper.openCommandBar = function(command) {
   sVimTab.mode = "insert";
-  var commandSpan = document.createElement('span');
-  commandSpan.innerHTML = urlOpener.name + ": ";
+  var completion = document.createElement('div');
+  completion.setAttribute("class", "svim-completion");
   var input = document.createElement('input');
-  input.value = '';
+  input.value = ":" + command + " ";
   input.setAttribute("autocomplete", "off");
   input.setAttribute("autocorrect", "off");
   input.setAttribute("autocapitalize", "off");
@@ -141,12 +167,18 @@ sVimHelper.search = function(urlOpener) {
   /* Safari reader mode support vim like navigation.
    * Here we trap keydown event to avoid the reader scroll when input j/k/d/u.
    */
-  input.onkeydown = function(e){ e.stopPropagation(); };
+  input.onkeydown = function(e){
+    e.stopPropagation();
+    // On Tab key pressed
+    if(e.keyCode == 9) {
+      e.preventDefault();
+    };
+  };
   sVimTab.commandDiv.innerHTML = '';
-  sVimTab.commandDiv.appendChild(commandSpan);
+  sVimTab.commandDiv.appendChild(completion);
   sVimTab.commandDiv.appendChild(input);
 
-  input.onkeypress = function(e){
+  input.onkeyup = function(e){
     if (!e) e = window.event;
     var keyCode = e.keyCode || e.which;
     if (keyCode == '13'){
@@ -160,24 +192,51 @@ sVimHelper.search = function(urlOpener) {
       close();
       return;
     }
+    // close command bar when input is empty
+    if (input.value == '') {
+      close();
+      return;
+    }
+    suggest(completion, input.value);
   };
 
   sVimTab.commandDiv.style.display = "block";
   input.focus();
 
   // Evaluate user command
-  function evaluate(c) {
-    var searchEngine = {
-      "google": "https://www.google.com/search?q=",
-      "duckduckgo": "https://duckduckgo.com/?q=",
-      "baidu": "http://www.baidu.com/s?wd=",
-      "bing": "https://www.bing.com/search?q=",
-      "yahoo": "https://search.yahoo.com/search?p=",
-      "sogou": "https://www.sogou.com/web?query="
-    };
-    var searchQuery = searchEngine[sVimTab.settings.searchengine] || searchEngine["google"];
-    var url = searchQuery + encodeURI(c)
-    urlOpener(url);
+  function evaluate(input) {
+    var re = /:(\w+)\s?(.*)$/
+    var m = input.match(re);
+    var command = m[1]
+    ap = sVimHelper.argumentProcessors[command];
+    command = sVimHelper.commandMap[command] || command
+    var argument = m[2]
+    argument = ap?ap(argument):argument;
+    sVimTab.commands[command](argument)
+  };
+
+  function suggest(parentElement, inputValue) {
+    var commandKeys = Object.keys(sVimTab.commands)
+    var re = /:(\w+)?\s?(.+)?$/
+    var match = inputValue.match(re)
+    if(match[2]) {
+      showSuggest(parentElement, {})
+    } else if(match[1]){
+      const result = commandKeys.filter(key => key.startsWith(match[1]) && key != match[1]);
+      showSuggest(parentElement, result);
+    } else {
+      showSuggest(parentElement, commandKeys)
+    }
+  }
+
+  function showSuggest(parentElement, suggestions) {
+    parentElement.innerHTML = '';
+    for(var s in suggestions) {
+      var line = document.createElement('div');
+      line.setAttribute("class", "svim-suggestion")
+      line.innerHTML = suggestions[s]
+      parentElement.appendChild(line);
+    }
   };
 
   // close command bar
@@ -186,4 +245,4 @@ sVimHelper.search = function(urlOpener) {
     sVimTab.commandDiv.innerHTML = "-- NORMAL --";
     sVimTab.commandDiv.style.display = "none";
   };
-};
+}
