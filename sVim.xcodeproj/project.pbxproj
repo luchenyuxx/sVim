@@ -1,0 +1,773 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3326878B20E26554007F9417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3326878A20E26554007F9417 /* AppDelegate.swift */; };
+		3326878D20E26554007F9417 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3326878C20E26554007F9417 /* ViewController.swift */; };
+		3326878F20E26555007F9417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3326878E20E26555007F9417 /* Assets.xcassets */; };
+		3326879220E26555007F9417 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3326879020E26555007F9417 /* Main.storyboard */; };
+		3326879E20E26556007F9417 /* sVimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3326879D20E26556007F9417 /* sVimTests.swift */; };
+		332687A920E26556007F9417 /* sVimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332687A820E26556007F9417 /* sVimUITests.swift */; };
+		332687BD20E265A9007F9417 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332687BC20E265A9007F9417 /* Cocoa.framework */; };
+		332687C020E265A9007F9417 /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332687BF20E265A9007F9417 /* SafariExtensionHandler.swift */; };
+		332687C220E265A9007F9417 /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332687C120E265A9007F9417 /* SafariExtensionViewController.swift */; };
+		332687C520E265A9007F9417 /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 332687C320E265A9007F9417 /* SafariExtensionViewController.xib */; };
+		332687CA20E265A9007F9417 /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 332687C920E265A9007F9417 /* ToolbarItemIcon.pdf */; };
+		332687CE20E265A9007F9417 /* sVimExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 332687BA20E265A9007F9417 /* sVimExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		33E9BC16213AEC140071E7CB /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 33E9BC15213AEC140071E7CB /* Icon.png */; };
+		33E9BC1E213AEC610071E7CB /* sVimGlobal.html in Resources */ = {isa = PBXBuildFile; fileRef = 33E9BC17213AEC600071E7CB /* sVimGlobal.html */; };
+		33E9BC1F213AEC610071E7CB /* sVimTab.js in Resources */ = {isa = PBXBuildFile; fileRef = 33E9BC18213AEC600071E7CB /* sVimTab.js */; };
+		33E9BC20213AEC610071E7CB /* sVimrc.html in Resources */ = {isa = PBXBuildFile; fileRef = 33E9BC19213AEC600071E7CB /* sVimrc.html */; };
+		33E9BC21213AEC610071E7CB /* sVimHelper.js in Resources */ = {isa = PBXBuildFile; fileRef = 33E9BC1A213AEC610071E7CB /* sVimHelper.js */; };
+		33E9BC22213AEC610071E7CB /* mousetrap.js in Resources */ = {isa = PBXBuildFile; fileRef = 33E9BC1B213AEC610071E7CB /* mousetrap.js */; };
+		33E9BC23213AEC610071E7CB /* sVim.css in Resources */ = {isa = PBXBuildFile; fileRef = 33E9BC1C213AEC610071E7CB /* sVim.css */; };
+		33E9BC24213AEC610071E7CB /* sVimHint.js in Resources */ = {isa = PBXBuildFile; fileRef = 33E9BC1D213AEC610071E7CB /* sVimHint.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3326879A20E26556007F9417 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3326877F20E26554007F9417 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3326878620E26554007F9417;
+			remoteInfo = sVim;
+		};
+		332687A520E26556007F9417 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3326877F20E26554007F9417 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3326878620E26554007F9417;
+			remoteInfo = sVim;
+		};
+		332687CC20E265A9007F9417 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3326877F20E26554007F9417 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 332687B920E265A9007F9417;
+			remoteInfo = sVimExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		332687D220E265A9007F9417 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				332687CE20E265A9007F9417 /* sVimExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3326878720E26554007F9417 /* sVim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sVim.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3326878A20E26554007F9417 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3326878C20E26554007F9417 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3326878E20E26555007F9417 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3326879120E26555007F9417 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3326879320E26555007F9417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3326879420E26555007F9417 /* sVim.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sVim.entitlements; sourceTree = "<group>"; };
+		3326879920E26556007F9417 /* sVimTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sVimTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3326879D20E26556007F9417 /* sVimTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sVimTests.swift; sourceTree = "<group>"; };
+		3326879F20E26556007F9417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		332687A420E26556007F9417 /* sVimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sVimUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		332687A820E26556007F9417 /* sVimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sVimUITests.swift; sourceTree = "<group>"; };
+		332687AA20E26556007F9417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		332687BA20E265A9007F9417 /* sVimExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = sVimExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		332687BC20E265A9007F9417 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		332687BF20E265A9007F9417 /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		332687C120E265A9007F9417 /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
+		332687C420E265A9007F9417 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
+		332687C620E265A9007F9417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		332687C920E265A9007F9417 /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		332687CB20E265A9007F9417 /* sVimExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sVimExtension.entitlements; sourceTree = "<group>"; };
+		33E9BC15213AEC140071E7CB /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		33E9BC17213AEC600071E7CB /* sVimGlobal.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sVimGlobal.html; sourceTree = "<group>"; };
+		33E9BC18213AEC600071E7CB /* sVimTab.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sVimTab.js; sourceTree = "<group>"; };
+		33E9BC19213AEC600071E7CB /* sVimrc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sVimrc.html; sourceTree = "<group>"; };
+		33E9BC1A213AEC610071E7CB /* sVimHelper.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sVimHelper.js; sourceTree = "<group>"; };
+		33E9BC1B213AEC610071E7CB /* mousetrap.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = mousetrap.js; sourceTree = "<group>"; };
+		33E9BC1C213AEC610071E7CB /* sVim.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = sVim.css; sourceTree = "<group>"; };
+		33E9BC1D213AEC610071E7CB /* sVimHint.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = sVimHint.js; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3326878420E26554007F9417 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3326879620E26556007F9417 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		332687A120E26556007F9417 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		332687B720E265A9007F9417 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				332687BD20E265A9007F9417 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3326877E20E26554007F9417 = {
+			isa = PBXGroup;
+			children = (
+				3326878920E26554007F9417 /* sVim */,
+				3326879C20E26556007F9417 /* sVimTests */,
+				332687A720E26556007F9417 /* sVimUITests */,
+				332687BE20E265A9007F9417 /* sVimExtension */,
+				332687BB20E265A9007F9417 /* Frameworks */,
+				3326878820E26554007F9417 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3326878820E26554007F9417 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3326878720E26554007F9417 /* sVim.app */,
+				3326879920E26556007F9417 /* sVimTests.xctest */,
+				332687A420E26556007F9417 /* sVimUITests.xctest */,
+				332687BA20E265A9007F9417 /* sVimExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3326878920E26554007F9417 /* sVim */ = {
+			isa = PBXGroup;
+			children = (
+				3326878A20E26554007F9417 /* AppDelegate.swift */,
+				3326878C20E26554007F9417 /* ViewController.swift */,
+				3326878E20E26555007F9417 /* Assets.xcassets */,
+				3326879020E26555007F9417 /* Main.storyboard */,
+				3326879320E26555007F9417 /* Info.plist */,
+				3326879420E26555007F9417 /* sVim.entitlements */,
+			);
+			path = sVim;
+			sourceTree = "<group>";
+		};
+		3326879C20E26556007F9417 /* sVimTests */ = {
+			isa = PBXGroup;
+			children = (
+				3326879D20E26556007F9417 /* sVimTests.swift */,
+				3326879F20E26556007F9417 /* Info.plist */,
+			);
+			path = sVimTests;
+			sourceTree = "<group>";
+		};
+		332687A720E26556007F9417 /* sVimUITests */ = {
+			isa = PBXGroup;
+			children = (
+				332687A820E26556007F9417 /* sVimUITests.swift */,
+				332687AA20E26556007F9417 /* Info.plist */,
+			);
+			path = sVimUITests;
+			sourceTree = "<group>";
+		};
+		332687BB20E265A9007F9417 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				332687BC20E265A9007F9417 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		332687BE20E265A9007F9417 /* sVimExtension */ = {
+			isa = PBXGroup;
+			children = (
+				33E9BC1B213AEC610071E7CB /* mousetrap.js */,
+				33E9BC1C213AEC610071E7CB /* sVim.css */,
+				33E9BC17213AEC600071E7CB /* sVimGlobal.html */,
+				33E9BC1A213AEC610071E7CB /* sVimHelper.js */,
+				33E9BC1D213AEC610071E7CB /* sVimHint.js */,
+				33E9BC19213AEC600071E7CB /* sVimrc.html */,
+				33E9BC18213AEC600071E7CB /* sVimTab.js */,
+				332687BF20E265A9007F9417 /* SafariExtensionHandler.swift */,
+				332687C120E265A9007F9417 /* SafariExtensionViewController.swift */,
+				332687C320E265A9007F9417 /* SafariExtensionViewController.xib */,
+				33E9BC15213AEC140071E7CB /* Icon.png */,
+				332687C620E265A9007F9417 /* Info.plist */,
+				332687C920E265A9007F9417 /* ToolbarItemIcon.pdf */,
+				332687CB20E265A9007F9417 /* sVimExtension.entitlements */,
+			);
+			path = sVimExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3326878620E26554007F9417 /* sVim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 332687AD20E26556007F9417 /* Build configuration list for PBXNativeTarget "sVim" */;
+			buildPhases = (
+				3326878320E26554007F9417 /* Sources */,
+				3326878420E26554007F9417 /* Frameworks */,
+				3326878520E26554007F9417 /* Resources */,
+				332687D220E265A9007F9417 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				332687CD20E265A9007F9417 /* PBXTargetDependency */,
+			);
+			name = sVim;
+			productName = sVim;
+			productReference = 3326878720E26554007F9417 /* sVim.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3326879820E26556007F9417 /* sVimTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 332687B020E26556007F9417 /* Build configuration list for PBXNativeTarget "sVimTests" */;
+			buildPhases = (
+				3326879520E26556007F9417 /* Sources */,
+				3326879620E26556007F9417 /* Frameworks */,
+				3326879720E26556007F9417 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3326879B20E26556007F9417 /* PBXTargetDependency */,
+			);
+			name = sVimTests;
+			productName = sVimTests;
+			productReference = 3326879920E26556007F9417 /* sVimTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		332687A320E26556007F9417 /* sVimUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 332687B320E26556007F9417 /* Build configuration list for PBXNativeTarget "sVimUITests" */;
+			buildPhases = (
+				332687A020E26556007F9417 /* Sources */,
+				332687A120E26556007F9417 /* Frameworks */,
+				332687A220E26556007F9417 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				332687A620E26556007F9417 /* PBXTargetDependency */,
+			);
+			name = sVimUITests;
+			productName = sVimUITests;
+			productReference = 332687A420E26556007F9417 /* sVimUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		332687B920E265A9007F9417 /* sVimExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 332687CF20E265A9007F9417 /* Build configuration list for PBXNativeTarget "sVimExtension" */;
+			buildPhases = (
+				332687B620E265A9007F9417 /* Sources */,
+				332687B720E265A9007F9417 /* Frameworks */,
+				332687B820E265A9007F9417 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sVimExtension;
+			productName = sVimExtension;
+			productReference = 332687BA20E265A9007F9417 /* sVimExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3326877F20E26554007F9417 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				TargetAttributes = {
+					3326878620E26554007F9417 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					3326879820E26556007F9417 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 3326878620E26554007F9417;
+					};
+					332687A320E26556007F9417 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 3326878620E26554007F9417;
+					};
+					332687B920E265A9007F9417 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 3326878220E26554007F9417 /* Build configuration list for PBXProject "sVim" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3326877E20E26554007F9417;
+			productRefGroup = 3326878820E26554007F9417 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3326878620E26554007F9417 /* sVim */,
+				3326879820E26556007F9417 /* sVimTests */,
+				332687A320E26556007F9417 /* sVimUITests */,
+				332687B920E265A9007F9417 /* sVimExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3326878520E26554007F9417 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3326878F20E26555007F9417 /* Assets.xcassets in Resources */,
+				3326879220E26555007F9417 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3326879720E26556007F9417 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		332687A220E26556007F9417 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		332687B820E265A9007F9417 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				332687CA20E265A9007F9417 /* ToolbarItemIcon.pdf in Resources */,
+				33E9BC20213AEC610071E7CB /* sVimrc.html in Resources */,
+				33E9BC1F213AEC610071E7CB /* sVimTab.js in Resources */,
+				33E9BC1E213AEC610071E7CB /* sVimGlobal.html in Resources */,
+				33E9BC22213AEC610071E7CB /* mousetrap.js in Resources */,
+				33E9BC16213AEC140071E7CB /* Icon.png in Resources */,
+				33E9BC23213AEC610071E7CB /* sVim.css in Resources */,
+				332687C520E265A9007F9417 /* SafariExtensionViewController.xib in Resources */,
+				33E9BC24213AEC610071E7CB /* sVimHint.js in Resources */,
+				33E9BC21213AEC610071E7CB /* sVimHelper.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3326878320E26554007F9417 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3326878D20E26554007F9417 /* ViewController.swift in Sources */,
+				3326878B20E26554007F9417 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3326879520E26556007F9417 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3326879E20E26556007F9417 /* sVimTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		332687A020E26556007F9417 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				332687A920E26556007F9417 /* sVimUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		332687B620E265A9007F9417 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				332687C220E265A9007F9417 /* SafariExtensionViewController.swift in Sources */,
+				332687C020E265A9007F9417 /* SafariExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3326879B20E26556007F9417 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3326878620E26554007F9417 /* sVim */;
+			targetProxy = 3326879A20E26556007F9417 /* PBXContainerItemProxy */;
+		};
+		332687A620E26556007F9417 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3326878620E26554007F9417 /* sVim */;
+			targetProxy = 332687A520E26556007F9417 /* PBXContainerItemProxy */;
+		};
+		332687CD20E265A9007F9417 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 332687B920E265A9007F9417 /* sVimExtension */;
+			targetProxy = 332687CC20E265A9007F9417 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3326879020E26555007F9417 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3326879120E26555007F9417 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		332687C320E265A9007F9417 /* SafariExtensionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				332687C420E265A9007F9417 /* Base */,
+			);
+			name = SafariExtensionViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		332687AB20E26556007F9417 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		332687AC20E26556007F9417 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		332687AE20E26556007F9417 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = sVim/sVim.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = sVim/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chenyu.sVim;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		332687AF20E26556007F9417 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = sVim/sVim.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = sVim/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chenyu.sVim;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		332687B120E26556007F9417 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = sVimTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chenyu.sVimTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sVim.app/Contents/MacOS/sVim";
+			};
+			name = Debug;
+		};
+		332687B220E26556007F9417 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = sVimTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chenyu.sVimTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sVim.app/Contents/MacOS/sVim";
+			};
+			name = Release;
+		};
+		332687B420E26556007F9417 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = sVimUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chenyu.sVimUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = sVim;
+			};
+			name = Debug;
+		};
+		332687B520E26556007F9417 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = sVimUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chenyu.sVimUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = sVim;
+			};
+			name = Release;
+		};
+		332687D020E265A9007F9417 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = sVimExtension/sVimExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = sVimExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chenyu.sVim.sVimExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		332687D120E265A9007F9417 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = sVimExtension/sVimExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = sVimExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chenyu.sVim.sVimExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3326878220E26554007F9417 /* Build configuration list for PBXProject "sVim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				332687AB20E26556007F9417 /* Debug */,
+				332687AC20E26556007F9417 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		332687AD20E26556007F9417 /* Build configuration list for PBXNativeTarget "sVim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				332687AE20E26556007F9417 /* Debug */,
+				332687AF20E26556007F9417 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		332687B020E26556007F9417 /* Build configuration list for PBXNativeTarget "sVimTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				332687B120E26556007F9417 /* Debug */,
+				332687B220E26556007F9417 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		332687B320E26556007F9417 /* Build configuration list for PBXNativeTarget "sVimUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				332687B420E26556007F9417 /* Debug */,
+				332687B520E26556007F9417 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		332687CF20E265A9007F9417 /* Build configuration list for PBXNativeTarget "sVimExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				332687D020E265A9007F9417 /* Debug */,
+				332687D120E265A9007F9417 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3326877F20E26554007F9417 /* Project object */;
+}
